@@ -18,11 +18,11 @@ report = f'{scorer_0} scored in the {goal_0}nd minute\n{scorer_1} scored in the 
 # Part 2
 player = 'Hans van Breukelen'
 
-first_name = player[player.find("Hans"):4]
+first_name = player[:player.find(" ")]
 
-last_name_len = len(player[player.find("van Breukelen"):len(player)])
+last_name_len = len(player[player.find(" ") + 1:len(player)])
 
-name_short = player[0] + '. ' + player[player.find("van Breukelen"):len(player)]
+name_short = player[0] + '. ' + player[player.find(" ") + 1:len(player)]
 
 chant_with_end_space = len(first_name) * f'{first_name}! '
 
